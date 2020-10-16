@@ -1,0 +1,338 @@
+<style>
+  .navbar{
+      opacity: 0.8;
+      display:flex;
+      position:sticky;
+      top:-4px;
+      z-index:1;
+  }
+  .nav-ul{
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      width: 50%;
+  }
+  .logo{
+      display: flex;
+  }
+  .navbar li{
+      display:flex;
+      align-items:center;
+
+  }
+  .navbar li a{
+      padding:10px 20px;
+      margin-right: 50px;
+      color:white;
+      text-decoration:none;
+      border-radius: 20px;
+      color: black;
+      background-color:white;
+  }
+  .navbar li a:hover{
+      color:white;
+      background-color:black;
+  }
+  .rightnav{
+      width:50%;
+      align-items:center;
+      padding: 15px 20px;
+      text-align:right;
+  }
+  .rightnav input{
+      border-radius: 90px;
+padding: 10px 10px;
+border: 2px solid black;
+text-align: center;
+box-shadow: 10px;;
+  }
+  .burger{
+      position:absolute;
+      right:5%;
+      top:20px;
+  }
+  .line{
+      width: 33px; 
+      background-color: white;
+      height:8px;
+  }
+  .bg{
+      position:relative;
+      top:-90px;
+      width: 100%;
+      height:70%;
+      left:0px;
+      background-image: url("/dark.jpg");
+      background-size:cover;
+      background-blend-mode:saturation;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height: 100vh;
+      contrast: 20%;  
+      z-index:-1;          
+  }
+  .biglogo img{
+      display:flex;
+      align-items: center;
+      border:2px solid white;
+      border-radius:50%;
+      filter: contrast(300%);
+  }
+
+  .main{
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      justify-content:center;
+      font-size:30px;
+      color:white;
+      padding: 10px 30px;
+  }
+  .btn{
+      border: 1px solid white;
+      border-radius: 20px;
+      color:white;
+      background-color:transparent;
+      font-weight:lighter;
+      padding:10px 20px;
+      margin-right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+  }
+  .btn a:hover{
+      background-color:yellow;
+  }
+  
+  .para1,.data{
+      width: 70%;
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      padding: 10px 50px;
+      justify-content: center;
+      margin-bottom: 40px;
+  }
+  .para1{
+  }
+  .para1img img{
+      display: flex;
+flex-direction: row-reverse;
+top: -40px;
+align-items: center;
+justify-content: center;
+float: right;
+width: 193px;
+max-height: fit-content;
+margin-bottom: 110px;
+padding-left: 50px;
+height: 245px;
+
+  }
+
+  .para1img img{
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      float: right;
+      width:290px;
+      padding-left: 50px;
+      height:300px;
+      border-radius:50px;
+      box-shadow: rgb(204, 197, 197);
+
+  }
+
+  h1{
+      font-family: 'Times New Roman', Times, serif;
+      color:purple;
+      text-align: center;
+     
+  }
+  .contactus{
+      text-align:center;
+      display:flex;
+      flex-direction: column;
+      border:2px solid black;
+      height:800px;
+      width: 90%;
+      margin:auto;
+      background-color:rgba(163, 38, 38,0.1);
+  }
+
+  .contacthead{
+      font-size: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin-bottom:80px;
+  }
+  .form{
+      display:flex;
+      flex-direction: column;
+      text-align:center;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      
+  }
+
+  .form input{
+      align-items:center;
+      text-align:center;
+      border: 2px solid black;
+      font-size: 20px;
+      color:black;
+      padding: 5px 40px;
+
+  }
+
+  .burger{
+      display:none;
+      position:absolute;
+      top:90px;
+      right:100px;
+      cursor:pointer;
+     
+
+  }
+  .line{
+      width:33px;
+      background-color:white;
+      height:4px;
+      margin:3px;
+  }
+
+  @media only screen and (max-width: 1000px){
+      .burger{
+          display:block;
+      }
+      .navbar{
+          background-color:rgba(34, 4, 4,0.2);
+          display:flex;
+          flex-direction:column;
+      }
+
+      .navbar ul{
+          flex-direction:column;
+          text-align:center;
+          justify-content:center;
+          align-items: center;
+          align-items: flex-end;
+      }
+      .nav-ul{
+          align-items: flex-end;
+      }
+      .navbar ul li a{
+          margin-top:20px;
+      }
+
+      .visib{
+          height: 40px;
+      }
+
+      .shownav{
+          opacity:3;
+      }
+      
+      
+      
+  }
+</style>
+<nav class = "navbar visib">
+  <ul class = "nav-ul shownav">
+      <div class = "logo"><img src = "/bur.jpg" width="20px" height = "20px"></div>
+      <li><a href = "#">Home</a></li>
+      <li><a href = "#">About</a></li>
+      <li><a href = "#">Services</a></li>
+      <li><a href = "#">Contact</a></li>
+  </ul>
+  <div class = "rightnav shownav">
+      <input type = "text" id = "search" placeholder = "Search in Site">
+      <button class ="btn">Search </button>
+  </div>
+  <div class = "burger">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+ </div>
+</nav>
+
+<section class = "bg">
+  <div class = "main">
+     <p class="text-big">Enjoy Your Delicious Food!</p>
+    <p class="text-small">Are you also don't wanna to make food today. We care for your taste and we brings
+         dozens of Italian/Chinese Food for you at affordable Prices. Hurry Up!</p>
+     <div class="buttons">
+         <a href = "www.google.com" ><button class="btn">Dishes</button></a>
+         <button class="btn">Restaurants</button>
+     </div>
+  </div>
+  <div class = "biglogo"><img src ="/bur.jpg" width = "200px" height = "200px"></div>
+</section></p>
+<h1>Your Surfing is end here!</h1>
+<section class = "data">
+  <div class = "para1">
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nob
+      is consequuntur, cum fuga esse veritais excepturi impedit nisi v
+      ero perferendiscupibr>ditate! Odio ducimus et ipsum, molestias laboriosam na
+      m provident natus. Aliquid id, molestias iusto consectetur pariatur doloribus modi sapiente eos!
+     </p>
+  </div>
+  <div class = "para1img"><img src = "/res.jpg"></div>
+
+</section>
+<h1>Now, you are good enough to choose what to eat!</h1>
+<section class = "data">
+ <div class = "para1">
+     <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nob
+     is consequuntur, cuquid id, molestias iusto consectetur pariatur doloribus modi sapiente eos!tatis excepturi impedit nisi v
+     ero perferendis iusto unde quaerat, recusandae neque ad voluptatibu
+     s dolore magnam temporibus et delectus?
+    </p>
+ </div>
+ <div class = "para1img"><img src = "/bg.jpg"></div>
+
+</section>
+<h1>This is your way, Choose what to do now!</h1>
+<section class = "data">
+
+ <div class = "para1">
+     
+     <p>
+         
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nob
+     is consequuntur, cum fuga esseis consequunturs numquam cupiditate! Odio ducimus et ipsum, molestias laboriosam na
+     m provident natus. Aliquid id, molestias iusto consecteneque ad voluptatibu s dolore magnam temporibus et delectus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatum minus enim sint p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eaque architecto dignissimos corporis nihil enim quisquam laboriosam consequuntur ut hic eius fugiat iusto nam, quos impedit debitis harum provident culpa temporibus Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, cupiditate aspernatur rem, ex, esse dolorum autem accusantium iure tempora necessitatibus distinctio alias! Assumenda, tenetur facere. Possimus nihil illo atque, nisi fuga rerum molestias nemo autem, magni beatae placeat facere, labore quas nam quam sequi odit rem praesentium doloribus dolores accusamus!ipsam aut doloribus! Amet recusandae fugiat nostrum debitis voluptatum.erferendis. Autem, obcaecati eligendi minima reiciendis numquam cupibr>ditate! Odio ducimus et ipsum, molestias laboriosam na m provident natus. Aliquid id, molestias iusto consectetur pariatur doloribus modi sapiente eos!tur pariatur doloribus modi sapiente eos!tatis excepturi impedit nisi v
+     ero perferendis iusto ue quaerat, recusandae neque ad voluptatibu
+     s dolore magnam temporibus et delectus?
+    </p>
+ </div>
+ <div class = "para1img"><img src = "/order.jpg"></div>
+
+</section>
+<div class = "contactus">
+ <div class = "contacthead">Contact Us</div>
+ <div class = "form">
+     <form>
+         <form action = "backend.php" method = 'POST'>
+           <input type = "text" name = "name" placeholder="Name">
+         <br><br><br>
+         <input type = "number" name = "contact Number" placeholder="Contact Number">
+        <br><br><br>
+         <input type = "email" name = "emailid" placeholder="Email Id">
+        <br><br><br> 
+        <input type = "number" name = "age" placeholder="Age(in years)">
+        <br><br><br>
+         <input type ="date" name = "dob" placeholder="Date Of Birth">
+        <br><br><br>
+         I have read all Terms and conditions:<input type = "checkbox" hello>
+         <br><br><br>
+         <input type="submit" placeholder="Submit">
+     </form>
+ </div>
+</div>
+<script>
+    
+</script>
